@@ -1,0 +1,497 @@
+/* ================================
+🌗 THEME VARIABLES
+================================ */
+:root {
+--bg-color: #1a1a1d;
+--text-color: #ffffff;
+--sidebar-color: #0e0e11;
+--highlight-color: #00aaff;
+--about-title-border: #00aaff;
+--info-icon-color: #00aaff;
+}
+
+body.light {
+--bg-color: #f9f9f9;
+--text-color: #1a1a1d;
+--sidebar-color: #ffffff;
+--highlight-color: #0077cc;
+--about-title-border: #0077cc;
+--info-icon-color: #0077cc;
+}
+
+/* ================================
+🫼 RESET & GLOBAL
+================================ */
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background: var(--bg-color);
+color: var(--text-color);
+}
+
+/* ================================
+📁 SIDEBAR
+================================ */
+.sidebar {
+width: 250px;
+background: var(--sidebar-color);
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+position: fixed;
+top: 0;
+left: 0;
+height: 100vh;
+overflow-y: auto;
+z-index: 1000;
+}
+
+.profile-img {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 15px;
+border: 3px solid var(--highlight-color);
+}
+
+.sidebar h2 {
+font-size: 20px;
+margin-bottom: 15px;
+color: var(--text-color);
+}
+
+.social-icons a {
+margin: 0 5px;
+font-size: 18px;
+color: #bbb;
+transition: 0.3s;
+}
+
+.social-icons a:hover {
+color: var(--highlight-color);
+}
+
+.nav-menu {
+width: 100%;
+margin-top: 30px;
+}
+
+.nav-menu a {
+display: block;
+padding: 12px;
+color: #ccc;
+text-decoration: none;
+font-size: 15px;
+border-radius: 8px;
+transition: 0.3s;
+}
+
+.nav-menu a i {
+margin-right: 10px;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+background: rgba(255, 255, 255, 0.05);
+color: var(--highlight-color);
+}
+
+/* ================================
+🏠 MAIN CONTENT
+================================ */
+.main-content {
+margin-left: 250px;
+padding: 100px 80px;
+min-height: 100vh;
+background: url('teg.jpg') no-repeat center center/cover;
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+}
+
+.intro {
+text-align: left;
+max-width: 600px;
+}
+
+.intro h1 {
+font-size: 48px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.intro p {
+font-size: 24px;
+}
+
+.highlight {
+color: var(--highlight-color);
+border-bottom: 2px solid var(--highlight-color);
+}
+
+/* ================================
+👤 ABOUT SECTION
+================================ */
+.about-section {
+margin-left: 250px;
+padding: 80px;
+background: var(--bg-color);
+color: var(--text-color);
+}
+
+.about-section h2 {
+font-size: 32px;
+margin-bottom: 20px;
+border-bottom: 3px solid var(--about-title-border);
+display: inline-block;
+}
+
+.about-section p {
+margin-top: 10px;
+font-size: 16px;
+line-height: 1.6;
+}
+
+.about-content {
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+margin-top: 30px;
+}
+
+.about-content img {
+width: 300px;
+border-radius: 12px;
+}
+
+.about-text {
+flex: 1;
+}
+
+.about-text h3 {
+font-size: 24px;
+margin-bottom: 10px;
+color: var(--text-color);
+}
+
+.about-text p {
+margin-bottom: 15px;
+}
+
+.about-info ul {
+list-style: none;
+padding: 0;
+display: grid;
+grid-template-columns: repeat(2, minmax(200px, 1fr));
+gap: 10px;
+}
+
+.about-info li {
+font-size: 16px;
+}
+
+.about-info i {
+color: var(--info-icon-color);
+margin-right: 5px;
+}
+.social-icons a {
+  margin: 0 5px;
+  font-size: 18px;
+  color: #bbb;
+  transition: 0.3s;
+  text-decoration: none; /* ini yang penting */
+}
+
+
+/* ================================
+💼 SKILLS SECTION
+================================ */
+.skills-section {
+margin-left: 250px;
+padding: 80px;
+background: var(--bg-color);
+color: var(--text-color);
+}
+
+.skills-section h2 {
+font-size: 32px;
+margin-bottom: 20px;
+border-bottom: 3px solid var(--about-title-border);
+display: inline-block;
+text-align: left;
+}
+
+.skills-section .subtext {
+font-size: 16px;
+color: #aaa;
+margin-bottom: 40px;
+}
+
+.skill-category {
+background: #1e1e1e;
+border-radius: 15px;
+margin: 40px auto;
+padding: 30px;
+max-width: 800px;
+box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.skill-category h3 {
+font-size: 20px;
+margin-bottom: 20px;
+}
+
+.skills {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+}
+
+.skill-badge {
+padding: 12px 20px;
+border-radius: 30px;
+background-color: #00ffff;
+color: #000;
+font-weight: bold;
+transition: transform 0.3s ease;
+}
+
+.skill-badge.back {
+background-color: #ff00ff;
+color: #fff;
+}
+
+.skill-badge:hover {
+transform: scale(1.1);
+}
+
+/* ================================
+💼 RESUME SECTION
+================================ */
+.resume-section {
+margin-left: 250px;
+padding: 60px;
+background: var(--bg-color);
+color: var(--text-color);
+}
+
+.resume-header {
+display: flex;
+align-items: center;
+margin-bottom: 30px;
+}
+
+.resume-photo {
+width: 120px;
+height: 120px;
+border-radius: 50%;
+border: 4px solid var(--highlight-color);
+object-fit: cover;
+margin-right: 30px;
+}
+
+.resume-info h2 {
+margin: 0;
+font-size: 28px;
+color: var(--highlight-color);
+}
+
+.resume-info p {
+margin: 5px 0;
+font-size: 14px;
+}
+
+.resume-body {
+display: flex;
+flex-wrap: wrap;
+gap: 40px;
+}
+
+.resume-left, .resume-right {
+flex: 1;
+min-width: 300px;
+}
+
+.resume-left h3,
+.resume-right h3 {
+color: var(--highlight-color);
+margin-top: 20px;
+}
+
+.resume-left ul,
+.resume-right ul {
+padding-left: 20px;
+}
+
+.resume-left li,
+.resume-right li {
+margin-bottom: 10px;
+}
+
+/* ================================
+🖼️ PORTFOLIO SECTION
+================================ */
+.portfolio-section {
+margin-left: 250px;
+padding: 80px 60px;
+background: var(--bg-color);
+color: var(--text-color);
+}
+
+.section-title {
+font-size: 32px;
+margin-bottom: 10px;
+border-bottom: 3px solid var(--highlight-color);
+display: inline-block;
+}
+
+.section-description {
+font-size: 16px;
+margin-bottom: 40px;
+color: #aaa;
+}
+
+.portfolio-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 30px;
+}
+
+.portfolio-item {
+background: #1e1e22;
+border-radius: 12px;
+overflow: hidden;
+transition: transform 0.3s;
+padding-bottom: 10px;
+}
+
+.portfolio-item img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+}
+
+.portfolio-item h3 {
+font-size: 20px;
+margin: 15px;
+color: var(--highlight-color);
+}
+
+.portfolio-item p {
+font-size: 14px;
+margin: 0 15px 15px;
+color: #ccc;
+}
+
+.portfolio-item:hover {
+transform: translateY(-5px);
+}
+
+/* ================================
+📞 CONTACT SECTION
+================================ */
+.contact-section {
+   margin-left: 250px;
+  padding: 80px 60px;
+  padding: 80px;
+  background-color: #1a1a49;
+  color: var(--text-color);
+  border-top: 3px solid var(--highlight-color);
+}
+
+
+.contact-wrapper {
+  max-width: 600px;
+  margin: 0;
+  padding: 0;
+  text-align: left; /* Ini penting agar kiri semua */
+}
+
+.contact-wrapper h2 {
+font-size: 32px;
+margin-bottom: 30px;
+color: var(--highlight-color);
+border-bottom: 2px solid var(--highlight-color);
+display: inline-block;
+}
+
+.contact-item {
+display: flex;
+align-items: center;
+font-size: 18px;
+margin-bottom: 20px;
+}
+
+.contact-item i {
+color: var(--highlight-color);
+margin-right: 15px;
+font-size: 20px;
+}
+
+/* ================================
+👣 FOOTER
+================================ */
+.watermark {
+margin-left: 250px;
+padding: 20px;
+text-align: center;
+font-size: 14px;
+color: #777;
+background-color: #111;
+border-top: 1px solid #333;
+}
+
+/* ================================
+📱 RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+.sidebar {
+position: relative;
+width: 100%;
+flex-direction: row;
+justify-content: space-around;
+height: auto;
+margin-bottom: 20px;
+}
+
+.main-content,
+.about-section,
+.skills-section,
+.portfolio-section,
+.resume-section,
+.contact-section,
+.watermark {
+margin-left: 0;
+padding: 60px 20px;
+}
+
+.about-content {
+flex-direction: column;
+align-items: center;
+}
+
+.about-content img {
+width: 100%;
+max-width: 300px;
+}
+
+.about-info ul {
+grid-template-columns: 1fr;
+}
+
+.resume-header {
+flex-direction: column;
+text-align: center;
+}
+
+.resume-photo {
+margin: 0 auto 20px;
+}
+}
